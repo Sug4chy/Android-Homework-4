@@ -8,6 +8,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import ru.sug4chy.timetable.R
 import ru.sug4chy.timetable.databinding.FragmentTimetableBinding
 import ru.sug4chy.timetable.ui.adapter.TimetableRecyclerAdapter
+import ru.sug4chy.timetable.ui.adapter.item_decoration.BorderCurrentDayItemDecoration
 import ru.sug4chy.timetable.utils.DateTimeUtils
 import ru.sug4chy.timetable.utils.TimetableData
 
@@ -27,6 +28,7 @@ class WeekTimetableFragment private constructor() : Fragment(R.layout.fragment_t
         binding.lessonsRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = this@WeekTimetableFragment.adapter
+            addItemDecoration(BorderCurrentDayItemDecoration())
         }
     }
 

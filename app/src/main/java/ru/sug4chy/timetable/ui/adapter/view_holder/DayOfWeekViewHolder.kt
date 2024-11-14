@@ -1,4 +1,4 @@
-package ru.sug4chy.timetable.ui.view_holder
+package ru.sug4chy.timetable.ui.adapter.view_holder
 
 import androidx.recyclerview.widget.RecyclerView
 import ru.sug4chy.timetable.databinding.ViewholderDayOfWeekBinding
