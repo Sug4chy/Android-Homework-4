@@ -6,15 +6,16 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import ru.sug4chy.timetable.R
-import ru.sug4chy.timetable.databinding.FragmentWeekTimetableBinding
+import ru.sug4chy.timetable.databinding.FragmentTimetableBinding
+import ru.sug4chy.timetable.ui.adapter.TimetableRecyclerAdapter
 import ru.sug4chy.timetable.utils.DateTimeUtils
 import ru.sug4chy.timetable.utils.TimetableData
 
-class WeekTimetableFragment private constructor() : Fragment(R.layout.fragment_week_timetable) {
+class WeekTimetableFragment private constructor() : Fragment(R.layout.fragment_timetable) {
 
-    private val binding: FragmentWeekTimetableBinding by viewBinding()
-    private val adapter: TimetableDayRecyclerAdapter = TimetableDayRecyclerAdapter(
-        TimetableData[
+    private val binding: FragmentTimetableBinding by viewBinding()
+    private val adapter: TimetableRecyclerAdapter = TimetableRecyclerAdapter(
+        data = TimetableData[
             DateTimeUtils.isCurrentWeekOdd()
         ]?.map { entry -> entry.value } ?: emptyList()
     )
@@ -23,7 +24,7 @@ class WeekTimetableFragment private constructor() : Fragment(R.layout.fragment_w
         // Default setup
         super.onViewCreated(view, savedInstanceState)
 
-        binding.weekLessonsRecycler.apply {
+        binding.lessonsRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = this@WeekTimetableFragment.adapter
         }

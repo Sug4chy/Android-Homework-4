@@ -1,4 +1,4 @@
-package ru.sug4chy.timetable.ui.week_timetable
+package ru.sug4chy.timetable.ui.adapter
 
 import ru.sug4chy.timetable.domain.model.TimetableItem
 
