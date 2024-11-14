@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/week_timetable_btn"
+        android:icon="@drawable/week_timetable_btn_icon"
+        android:title="@string/bottom_menu_week_btn_title"/>
+    <item
+        android:id="@+id/today_timetable_btn"
+        android:icon="@drawable/today_timetable_btn_icon"
+        android:title="@string/bottom_menu_today_btn_title"/>
+</menu>
