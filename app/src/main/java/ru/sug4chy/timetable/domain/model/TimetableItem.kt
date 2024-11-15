@@ -5,5 +5,7 @@ data class TimetableItem(
     val startTime: String,
     val endTime: String,
     val classroomName: String,
-    val teacherFullName: String
-)
+    val teacherFullName: String,
+) {
+    lateinit var dayOfWeek: String
+}

@@ -20,7 +20,13 @@ class TimetableRecyclerAdapter(
                         listOf(TimetableItemOrStringWrapper.ofString("Сегодня пар нет!"))
                     } else {
                         day.lessons
-                            .map { lesson -> TimetableItemOrStringWrapper.ofTimetableItem(lesson) }
+                            .map { lesson ->
+                                TimetableItemOrStringWrapper.ofTimetableItem(
+                                    item = lesson.apply {
+                                        dayOfWeek = day.dayOfWeek
+                                    }
+                                )
+                            }
                     }
         }
 
@@ -62,7 +68,4 @@ class TimetableRecyclerAdapter(
             is TimetableItemViewHolder -> holder.bind(internalData[position].timetableItem ?: return)
         }
     }
-
-    operator fun get(position: Int): TimetableItemOrStringWrapper =
-        internalData[position]
 }

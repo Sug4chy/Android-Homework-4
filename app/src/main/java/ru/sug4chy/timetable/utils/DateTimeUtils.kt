@@ -12,6 +12,9 @@ object DateTimeUtils {
     val currentDayOfWeek: DayOfWeek
         get() = LocalDate.now().dayOfWeek
 
+    val currentDayOfWeekFormatted: String
+        get() = formatDayOfWeek(currentDayOfWeek)
+
     fun formatDayOfWeek(dayOfWeek: DayOfWeek): String =
         dayOfWeek.getDisplayName(TextStyle.FULL, Locale.forLanguageTag("ru-RU"))
             .capitalizeFirstChar()

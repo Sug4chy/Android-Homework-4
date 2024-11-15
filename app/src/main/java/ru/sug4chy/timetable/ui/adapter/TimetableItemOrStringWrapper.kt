@@ -22,9 +22,9 @@ data class TimetableItemOrStringWrapper(
             )
 
         @JvmStatic
-        fun ofTimetableItem(day: TimetableItem): TimetableItemOrStringWrapper =
+        fun ofTimetableItem(item: TimetableItem): TimetableItemOrStringWrapper =
             TimetableItemOrStringWrapper(
-                timetableItem = day,
+                timetableItem = item,
                 type = Type.TIMETABLE_ITEM
             )
     }
