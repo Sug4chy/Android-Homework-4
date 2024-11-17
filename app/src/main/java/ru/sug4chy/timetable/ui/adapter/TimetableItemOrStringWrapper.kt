@@ -14,14 +14,12 @@ data class TimetableItemOrStringWrapper(
 
     companion object {
 
-        @JvmStatic
         fun ofString(string: String): TimetableItemOrStringWrapper =
             TimetableItemOrStringWrapper(
                 string = string,
                 type = Type.STRING
             )
 
-        @JvmStatic
         fun ofTimetableItem(item: TimetableItem): TimetableItemOrStringWrapper =
             TimetableItemOrStringWrapper(
                 timetableItem = item,

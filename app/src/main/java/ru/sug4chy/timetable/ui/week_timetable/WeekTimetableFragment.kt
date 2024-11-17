@@ -34,10 +34,7 @@ class WeekTimetableFragment private constructor() : Fragment(R.layout.fragment_t
 
     companion object {
 
-        @JvmStatic
         fun createNew(): WeekTimetableFragment =
-            WeekTimetableFragment().apply {
-
-            }
+            WeekTimetableFragment()
     }
 }

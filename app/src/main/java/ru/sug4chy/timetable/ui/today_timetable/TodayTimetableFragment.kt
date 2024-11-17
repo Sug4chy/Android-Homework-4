@@ -33,10 +33,7 @@ class TodayTimetableFragment private constructor() : Fragment(R.layout.fragment_
 
     companion object {
 
-        @JvmStatic
         fun createNew(): TodayTimetableFragment =
-            TodayTimetableFragment().apply {
-
-            }
+            TodayTimetableFragment()
     }
 }
