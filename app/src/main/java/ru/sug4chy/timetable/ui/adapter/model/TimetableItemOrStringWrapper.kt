@@ -1,6 +1,6 @@
-package ru.sug4chy.timetable.ui.adapter
+package ru.sug4chy.timetable.ui.adapter.model
 
-import ru.sug4chy.timetable.domain.model.TimetableItem
+import ru.sug4chy.timetable.model.TimetableItem
 
 data class TimetableItemOrStringWrapper(
     val string: String? = null,

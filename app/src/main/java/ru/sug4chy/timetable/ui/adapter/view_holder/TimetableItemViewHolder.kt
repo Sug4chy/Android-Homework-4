@@ -2,7 +2,7 @@ package ru.sug4chy.timetable.ui.adapter.view_holder
 
 import androidx.recyclerview.widget.RecyclerView
 import ru.sug4chy.timetable.databinding.ViewholderTimetableItemBinding
-import ru.sug4chy.timetable.domain.model.TimetableItem
+import ru.sug4chy.timetable.model.TimetableItem
 import ru.sug4chy.timetable.utils.DateTimeUtils
 
 class TimetableItemViewHolder(

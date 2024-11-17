@@ -40,10 +40,7 @@ class RootFragment private constructor() : Fragment(R.layout.fragment_root) {
 
     companion object {
 
-        @JvmStatic
         fun createNew(): RootFragment =
-            RootFragment().apply {
-
-            }
+            RootFragment()
     }
 }

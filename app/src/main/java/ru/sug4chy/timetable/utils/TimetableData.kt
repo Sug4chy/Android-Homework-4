@@ -1,10 +1,9 @@
 package ru.sug4chy.timetable.utils
 
-import ru.sug4chy.timetable.domain.model.TimetableDay
-import ru.sug4chy.timetable.domain.model.TimetableItem
-import java.time.DayOfWeek
-
+import ru.sug4chy.timetable.model.TimetableDay
+import ru.sug4chy.timetable.model.TimetableItem
 import ru.sug4chy.timetable.utils.DateTimeUtils.formatDayOfWeek
+import java.time.DayOfWeek
 
 object TimetableData {
 

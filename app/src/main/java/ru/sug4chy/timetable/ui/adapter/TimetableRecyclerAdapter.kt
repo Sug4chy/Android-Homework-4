@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.sug4chy.timetable.databinding.ViewholderDayOfWeekBinding
 import ru.sug4chy.timetable.databinding.ViewholderTimetableItemBinding
-import ru.sug4chy.timetable.domain.model.TimetableDay
+import ru.sug4chy.timetable.model.TimetableDay
+import ru.sug4chy.timetable.ui.adapter.model.TimetableItemOrStringWrapper
 import ru.sug4chy.timetable.ui.adapter.view_holder.DayOfWeekViewHolder
 import ru.sug4chy.timetable.ui.adapter.view_holder.TimetableItemViewHolder
 
@@ -65,7 +66,9 @@ class TimetableRecyclerAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is DayOfWeekViewHolder -> holder.bind(internalData[position].string ?: return)
-            is TimetableItemViewHolder -> holder.bind(internalData[position].timetableItem ?: return)
+            is TimetableItemViewHolder -> holder.bind(
+                internalData[position].timetableItem ?: return
+            )
         }
     }
 }

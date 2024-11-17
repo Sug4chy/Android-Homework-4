@@ -1,4 +1,4 @@
-package ru.sug4chy.timetable.domain.model
+package ru.sug4chy.timetable.model
 
 data class TimetableDay(
     val dayOfWeek: String,
