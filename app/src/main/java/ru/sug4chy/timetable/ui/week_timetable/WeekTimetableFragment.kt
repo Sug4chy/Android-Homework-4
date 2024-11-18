@@ -25,7 +25,7 @@ class WeekTimetableFragment private constructor() : Fragment(R.layout.fragment_t
         // Default setup
         super.onViewCreated(view, savedInstanceState)
 
-        binding.lessonsRecycler.apply {
+        with(binding.lessonsRecycler) {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = this@WeekTimetableFragment.adapter
             addItemDecoration(BorderCurrentDayItemDecoration())
